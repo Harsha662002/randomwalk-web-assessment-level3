@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #3b4652;
+  font-family: "Indie Flower", "Comic Sans", cursive;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+}
+
+/*TITLE OF GAME STYLES */
+.gameName {
+  display: flex;
+  flex: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 11.5rem;
+}
+
+.topbar button {
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 1.5rem;
+  padding: 1rem;
+  background-color: #303942;
+}
+
+.gameName h1 {
+  border: 2px black solid;
+  font-size: 3rem;
+  padding: 0.5rem 5rem;
+  color: #fff;
+}
+
+/*PLAYERS SCORECARD STYLES */
+.playersScorecard {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  color: #fff;
+}
+.playerA {
+  width: 150px;
+  margin-left: 15%;
+}
+
+.playerB {
+  width: 150px;
+  margin-left: 50%;
+}
+
+.playerA div,
+.playerB div {
+  padding: 20px;
+  border: 2px black solid;
+  font-size: 2rem;
+}
+
+/*GAME ZONE STYLES */
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/*GAME BOARD STYLES */
+.gameBoard {
+  width: 350px;
+  height: 250px;
+  background-color: #303942;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 30px 90px;
+  border: 2px black solid;
+}
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-size: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #252526;
+}
+.cell:hover {
+  background: #d6d5d5;
+}
+
+/*GAME BUTTONS STYLES */
+.gameButtons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.restartButton {
+  font-size: 1.1rem;
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  background-color: #22262b;
+  font-family: "Indie Flower", "Comic Sans", cursive;
+}
+
+.restartButton:hover {
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+}
+/*PLAYERS POSITION STYLES */
+.playersPostion {
+  margin-top: 1rem;
+  display: flex;
+  font-size: 3rem;
+  color: white;
+}
+
+.playerPostionA {
+  position: fixed;
+  width: max-content;
+  text-align: center;
+  border: 2px black solid;
+  left: 10rem;
+  background-color: #22262b;
+}
+.playerPostionB {
+  position: fixed;
+  width: max-content;
+  text-align: center;
+  border: 2px black solid;
+  right: 10rem;
+  background-color: #22262b;
+}
+
+/*TO SHOW WHICH PLAYER IS CURRENTLY ACTIVE */
+.playerActive {
+  background-color: #fff;
+  color: #000;
+}
+.playerWinner {
+  background-color: green;
+}
+
+/*LAPTOP OF WIDTH-1024px STYLES */
+@media screen and (max-width: 1024px) {
+  .gameName h1 {
+    font-size: 2.5rem;
+    padding: 0.5rem 4rem;
+  }
+  .playerA {
+    width: 125px;
+    margin-left: 10%;
+  }
+
+  .playerB {
+    width: 125px;
+    margin-left: 55%;
+  }
+  .playerA div,
+  .playerB div {
+    padding: 18px;
+  }
+  .gameBoard {
+    width: 280px;
+    height: 210px;
+  }
+
+  .restartButton {
+    font-size: 1rem;
+    width: 120px;
+    height: 30px;
+  }
+
+  .playersPostion {
+    font-size: 2.5rem;
+  }
+  .playerPostionA,
+  .playerPostionB {
+    width: 70px;
+    height: 50px;
+  }
+}
+
+/*TABLET OF WIDTH-768px STYLES */
+@media screen and (max-width: 768px) {
+  .gameName h1 {
+    font-size: 1.75rem;
+    padding: 0.5rem 2.5rem;
+  }
+
+  .playerA {
+    width: 90px;
+    margin-left: 10%;
+  }
+
+  .playerB {
+    width: 90px;
+    margin-left: 60%;
+  }
+
+  .playerA div,
+  .playerB div {
+    padding: 12px;
+  }
+
+  .gameBoard {
+    width: 260px;
+    height: 190px;
+    padding: 30px 70px;
+  }
+  .cell {
+    font-size: 35px;
+  }
+
+  .restartButton {
+    font-size: 1rem;
+    width: 100px;
+    height: 28px;
+  }
+
+  .playersPostion {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+
+  .playerPostionA {
+    width: 60px;
+    height: 40px;
+    left: 6rem;
+  }
+  .playerPostionB {
+    width: 60px;
+    height: 40px;
+    right: 6rem;
+  }
+}
+
+/*MOBILE OF WIDTH-426px STYLES */
+@media screen and (max-width: 426px) {
+  .gameName h1 {
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .playerA {
+    width: 70px;
+    margin-left: 10%;
+  }
+
+  .playerB {
+    width: 70px;
+    margin-left: 50%;
+  }
+
+  .playerA div,
+  .playerB div {
+    padding: 6px;
+  }
+  .gameContainer {
+    margin-top: 2rem;
+  }
+
+  .gameBoard {
+    width: 200px;
+    height: 150px;
+    padding: 30px 50px;
+  }
+  .cell {
+    font-size: 30px;
+  }
+  .restartButton {
+    font-size: 1rem;
+    width: 100px;
+    height: 28px;
+  }
+
+  .playerPostionA {
+    width: 60px;
+    height: 40px;
+    left: 3rem;
+  }
+  .playerPostionB {
+    width: 60px;
+    height: 40px;
+    right: 3rem;
+  }
+}
